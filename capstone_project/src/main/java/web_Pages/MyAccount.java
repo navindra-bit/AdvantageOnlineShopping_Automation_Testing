@@ -16,7 +16,7 @@ public class MyAccount {
 	@FindBy(id = "menuUserLink") WebElement loginicon;
 	@FindBy(xpath="//label[@role='link'][normalize-space()='My account']") WebElement myAccountOption;
 
-	@FindBy(className="floatRigth ng-scope") WebElement editDetailsLink;
+	@FindBy(xpath="//a[@href='#/accountDetails']") WebElement editDetailsLink;
 	
 	@FindBy(name="first_nameAccountDetails") WebElement firstName;
 	@FindBy(name="last_nameAccountDetails") WebElement lastName;
@@ -28,19 +28,19 @@ public class MyAccount {
 	@FindBy(name="state_/_province_/_regionAccountDetails") WebElement state;
 	
 	//for payment preference
-	@FindBy(className="floatRigth ng-scope") WebElement paymentPrefference;
+	@FindBy(xpath="//a[@href='#/accountPaymentEdit']") WebElement paymentPrefference;
 	
 	@FindBy(xpath="//img[@alt='Master credit']") WebElement masterCard;
 	@FindBy(id="creditCard") WebElement masterCardnumber;
 	@FindBy(name="cvv_number") WebElement masterCardpin;
-	@FindBy(name="mmListbox") WebElement masterCardyear;
-	@FindBy(name="yyyyListbox") WebElement masterCardmonth;
+	@FindBy(name="mmListbox") WebElement masterCardmonth;
+	@FindBy(name="yyyyListbox") WebElement  masterCardyear;
 	@FindBy(name="cardholder_name") WebElement masterCardname;
 	@FindBy(name="save_master_credit") WebElement masterCardcheckbox;
 	
 	@FindBy(xpath="//img[@alt='Safepay']") WebElement Safepay;
 	@FindBy(name="safepay_username") WebElement SafepayUsername;
-	@FindBy(name = "SafePay password") WebElement SafepayPassword;
+	@FindBy(name = "safepay_password") WebElement SafepayPassword;
 	@FindBy(name="preferred_payment_safepay") WebElement SafepayCheckbox;
 	
 	//saving the card

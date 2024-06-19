@@ -138,7 +138,7 @@ public class AppTest extends BaseClass{
 	public void LoginTestCase() throws InterruptedException, IOException {
 		login=new LoginPage(driver);	
 		login.loginBtn().click();
-		FileInputStream fis=new FileInputStream("./data.properties");
+		FileInputStream fis=new FileInputStream("./src/test/java/credentials/data.properties");
 		properties.load(fis);
 		Thread.sleep(2000);
 		login.userName().sendKeys(properties.getProperty("username"));
